@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WindowsFormsApp2": {
+      "commandName": "Project",
+      "sqlDebugging": true,
+      "nativeDebugging": true,
+      "jsWebView2Debugging": true
+    }
+  }
+}
