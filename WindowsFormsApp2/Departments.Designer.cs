@@ -68,7 +68,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Location = new System.Drawing.Point(311, 836);
+            this.button2.Location = new System.Drawing.Point(257, 836);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 49);
             this.button2.TabIndex = 42;
@@ -93,7 +93,7 @@
             this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Teal;
             this.dateTimePicker2.Location = new System.Drawing.Point(11, 675);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(468, 30);
+            this.dateTimePicker2.Size = new System.Drawing.Size(414, 30);
             this.dateTimePicker2.TabIndex = 40;
             // 
             // dateTimePicker1
@@ -101,7 +101,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Teal;
             this.dateTimePicker1.Location = new System.Drawing.Point(11, 592);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(468, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(414, 30);
             this.dateTimePicker1.TabIndex = 39;
             // 
             // comboBox2
@@ -109,7 +109,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(12, 510);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(469, 33);
+            this.comboBox2.Size = new System.Drawing.Size(413, 33);
             this.comboBox2.TabIndex = 38;
             // 
             // comboBox1
@@ -121,7 +121,7 @@
             "Other"});
             this.comboBox1.Location = new System.Drawing.Point(11, 421);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(469, 33);
+            this.comboBox1.Size = new System.Drawing.Size(414, 33);
             this.comboBox1.TabIndex = 35;
             // 
             // textBox6
@@ -130,7 +130,7 @@
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(12, 755);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(469, 41);
+            this.textBox6.Size = new System.Drawing.Size(413, 41);
             this.textBox6.TabIndex = 37;
             // 
             // label8
@@ -194,7 +194,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(12, 325);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(469, 41);
+            this.textBox1.Size = new System.Drawing.Size(413, 41);
             this.textBox1.TabIndex = 29;
             // 
             // label3
@@ -236,7 +236,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1069);
+            this.panel2.Location = new System.Drawing.Point(0, 1022);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1343, 33);
             this.panel2.TabIndex = 33;
@@ -256,7 +256,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1343, 1102);
+            this.ClientSize = new System.Drawing.Size(1343, 1055);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
