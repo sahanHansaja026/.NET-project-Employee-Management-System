@@ -40,21 +40,21 @@
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
+            EmpNameTb = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
             label7 = new System.Windows.Forms.Label();
-            textBox6 = new System.Windows.Forms.TextBox();
+            DailySalTb = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
-            comboBox1 = new System.Windows.Forms.ComboBox();
-            comboBox2 = new System.Windows.Forms.ComboBox();
-            button1 = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            GenCb = new System.Windows.Forms.ComboBox();
+            DepCb = new System.Windows.Forms.ComboBox();
+            AddBtn = new System.Windows.Forms.Button();
+            UpdateBtn = new System.Windows.Forms.Button();
+            EmployeeList = new Guna.UI2.WinForms.Guna2DataGridView();
+            DOBTb = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            JDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label9 = new System.Windows.Forms.Label();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             label10 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             pictureBox3 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeeList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -119,15 +119,15 @@
             label3.TabIndex = 6;
             label3.Text = "Employee Name";
             // 
-            // textBox1
+            // EmpNameTb
             // 
-            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox1.Location = new System.Drawing.Point(12, 316);
-            textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(409, 41);
-            textBox1.TabIndex = 7;
+            EmpNameTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            EmpNameTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            EmpNameTb.Location = new System.Drawing.Point(12, 316);
+            EmpNameTb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            EmpNameTb.Name = "EmpNameTb";
+            EmpNameTb.Size = new System.Drawing.Size(409, 41);
+            EmpNameTb.TabIndex = 7;
             // 
             // label4
             // 
@@ -184,15 +184,15 @@
             label7.Text = "Join Date";
             label7.Click += label7_Click;
             // 
-            // textBox6
+            // DailySalTb
             // 
-            textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox6.Location = new System.Drawing.Point(12, 854);
-            textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new System.Drawing.Size(409, 41);
-            textBox6.TabIndex = 18;
+            DailySalTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            DailySalTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            DailySalTb.Location = new System.Drawing.Point(12, 854);
+            DailySalTb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            DailySalTb.Name = "DailySalTb";
+            DailySalTb.Size = new System.Drawing.Size(409, 41);
+            DailySalTb.TabIndex = 18;
             // 
             // label8
             // 
@@ -205,58 +205,59 @@
             label8.TabIndex = 17;
             label8.Text = "Employee Daily Salary";
             // 
-            // comboBox1
+            // GenCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female", "Other" });
-            comboBox1.Location = new System.Drawing.Point(11, 436);
-            comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(410, 28);
-            comboBox1.TabIndex = 16;
+            GenCb.FormattingEnabled = true;
+            GenCb.Items.AddRange(new object[] { "Male", "Female", "Other" });
+            GenCb.Location = new System.Drawing.Point(11, 436);
+            GenCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            GenCb.Name = "GenCb";
+            GenCb.Size = new System.Drawing.Size(410, 28);
+            GenCb.TabIndex = 16;
             // 
-            // comboBox2
+            // DepCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new System.Drawing.Point(12, 548);
-            comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(409, 28);
-            comboBox2.TabIndex = 20;
+            DepCb.FormattingEnabled = true;
+            DepCb.Location = new System.Drawing.Point(12, 548);
+            DepCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            DepCb.Name = "DepCb";
+            DepCb.Size = new System.Drawing.Size(409, 28);
+            DepCb.TabIndex = 20;
             // 
-            // button1
+            // AddBtn
             // 
-            button1.BackColor = System.Drawing.Color.Teal;
-            button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button1.ForeColor = System.Drawing.Color.White;
-            button1.Location = new System.Drawing.Point(0, 933);
-            button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(168, 61);
-            button1.TabIndex = 23;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            AddBtn.BackColor = System.Drawing.Color.Teal;
+            AddBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            AddBtn.ForeColor = System.Drawing.Color.White;
+            AddBtn.Location = new System.Drawing.Point(0, 933);
+            AddBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            AddBtn.Name = "AddBtn";
+            AddBtn.Size = new System.Drawing.Size(168, 61);
+            AddBtn.TabIndex = 23;
+            AddBtn.Text = "Add";
+            AddBtn.UseVisualStyleBackColor = false;
+            AddBtn.Click += button1_Click;
             // 
-            // button2
+            // UpdateBtn
             // 
-            button2.BackColor = System.Drawing.Color.White;
-            button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button2.ForeColor = System.Drawing.Color.Teal;
-            button2.Location = new System.Drawing.Point(252, 933);
-            button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(168, 61);
-            button2.TabIndex = 24;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = false;
+            UpdateBtn.BackColor = System.Drawing.Color.White;
+            UpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            UpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            UpdateBtn.ForeColor = System.Drawing.Color.Teal;
+            UpdateBtn.Location = new System.Drawing.Point(252, 933);
+            UpdateBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            UpdateBtn.Name = "UpdateBtn";
+            UpdateBtn.Size = new System.Drawing.Size(168, 61);
+            UpdateBtn.TabIndex = 24;
+            UpdateBtn.Text = "Update";
+            UpdateBtn.UseVisualStyleBackColor = false;
+            UpdateBtn.Click += UpdateBtn_Click;
             // 
-            // guna2DataGridView1
+            // EmployeeList
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            EmployeeList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -264,9 +265,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            EmployeeList.ColumnHeadersHeight = 4;
+            EmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -274,69 +275,69 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new System.Drawing.Point(531, 289);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new System.Drawing.Size(703, 579);
-            guna2DataGridView1.TabIndex = 26;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            EmployeeList.DefaultCellStyle = dataGridViewCellStyle3;
+            EmployeeList.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            EmployeeList.Location = new System.Drawing.Point(531, 289);
+            EmployeeList.Name = "EmployeeList";
+            EmployeeList.RowHeadersVisible = false;
+            EmployeeList.RowHeadersWidth = 51;
+            EmployeeList.Size = new System.Drawing.Size(703, 579);
+            EmployeeList.TabIndex = 26;
+            EmployeeList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            EmployeeList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            EmployeeList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            EmployeeList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            EmployeeList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            EmployeeList.ThemeStyle.BackColor = System.Drawing.Color.White;
+            EmployeeList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            EmployeeList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
+            EmployeeList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            EmployeeList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            EmployeeList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            EmployeeList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeList.ThemeStyle.HeaderStyle.Height = 4;
+            EmployeeList.ThemeStyle.ReadOnly = false;
+            EmployeeList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            EmployeeList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            EmployeeList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            EmployeeList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            EmployeeList.ThemeStyle.RowsStyle.Height = 29;
+            EmployeeList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            EmployeeList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             // 
-            // guna2DateTimePicker1
+            // DOBTb
             // 
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
-            guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            guna2DateTimePicker1.ForeColor = System.Drawing.Color.Teal;
-            guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new System.Drawing.Point(11, 636);
-            guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2DateTimePicker1.Size = new System.Drawing.Size(409, 49);
-            guna2DateTimePicker1.TabIndex = 27;
-            guna2DateTimePicker1.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
+            DOBTb.Checked = true;
+            DOBTb.CustomizableEdges = customizableEdges1;
+            DOBTb.FillColor = System.Drawing.Color.White;
+            DOBTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            DOBTb.ForeColor = System.Drawing.Color.Teal;
+            DOBTb.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            DOBTb.Location = new System.Drawing.Point(11, 636);
+            DOBTb.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            DOBTb.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            DOBTb.Name = "DOBTb";
+            DOBTb.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            DOBTb.Size = new System.Drawing.Size(409, 49);
+            DOBTb.TabIndex = 27;
+            DOBTb.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
             // 
-            // guna2DateTimePicker2
+            // JDate
             // 
-            guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges3;
-            guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
-            guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            guna2DateTimePicker2.ForeColor = System.Drawing.Color.Teal;
-            guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            guna2DateTimePicker2.Location = new System.Drawing.Point(12, 739);
-            guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2DateTimePicker2.Size = new System.Drawing.Size(409, 49);
-            guna2DateTimePicker2.TabIndex = 28;
-            guna2DateTimePicker2.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
+            JDate.Checked = true;
+            JDate.CustomizableEdges = customizableEdges3;
+            JDate.FillColor = System.Drawing.Color.White;
+            JDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            JDate.ForeColor = System.Drawing.Color.Teal;
+            JDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            JDate.Location = new System.Drawing.Point(12, 739);
+            JDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            JDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            JDate.Name = "JDate";
+            JDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            JDate.Size = new System.Drawing.Size(409, 49);
+            JDate.TabIndex = 28;
+            JDate.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
             // 
             // label9
             // 
@@ -440,21 +441,21 @@
             Controls.Add(label12);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(guna2DateTimePicker2);
-            Controls.Add(guna2DateTimePicker1);
-            Controls.Add(guna2DataGridView1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox6);
+            Controls.Add(JDate);
+            Controls.Add(DOBTb);
+            Controls.Add(EmployeeList);
+            Controls.Add(UpdateBtn);
+            Controls.Add(AddBtn);
+            Controls.Add(DepCb);
+            Controls.Add(GenCb);
+            Controls.Add(DailySalTb);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(panel2);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(EmpNameTb);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(panel1);
@@ -462,7 +463,7 @@
             Name = "Employees";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeeList).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -477,21 +478,21 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EmpNameTb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox DailySalTb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private System.Windows.Forms.ComboBox GenCb;
+        private System.Windows.Forms.ComboBox DepCb;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private Guna.UI2.WinForms.Guna2DataGridView EmployeeList;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DOBTb;
+        private Guna.UI2.WinForms.Guna2DateTimePicker JDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label10;

@@ -12,11 +12,19 @@ namespace WindowsFormsApp2
 {
     public partial class Employees : Form
     {
+        Functions Con;
         public Employees()
         {
             InitializeComponent();
+            Con = new Functions();
+            ShowEmployees();
+            GetDeprtment();
         }
-
+        private void ShowEmployees()
+        {
+            string Query = "Select * From EmployeeTab";
+            EmployeeList.DataSource = Con.GetData(Query);
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -36,8 +44,19 @@ namespace WindowsFormsApp2
         {
 
         }
-
+        private void GetDeprtment()
+        {
+            string Query = "select * From DeparmentTbl";
+            DepCb.DisplayMember = Con.GetData(Query).Columns["DepName"].ToString();
+            DepCb.ValueMember = Con.GetData(Query).Columns["id"].ToString();
+            DepCb.DataSource = Con.GetData(Query);
+        }
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
 
         }
