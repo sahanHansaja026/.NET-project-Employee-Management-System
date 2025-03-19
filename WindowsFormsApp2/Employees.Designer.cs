@@ -54,7 +54,7 @@
             UpdateBtn = new System.Windows.Forms.Button();
             EmployeeList = new Guna.UI2.WinForms.Guna2DataGridView();
             DOBTb = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            JDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            JDateTb = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label9 = new System.Windows.Forms.Label();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             label10 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             label12 = new System.Windows.Forms.Label();
             pictureBox3 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
+            Delete = new System.Windows.Forms.Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)EmployeeList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -304,6 +305,7 @@
             EmployeeList.ThemeStyle.RowsStyle.Height = 29;
             EmployeeList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             EmployeeList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            EmployeeList.CellContentClick += EmployeeList_CellContentClick;
             // 
             // DOBTb
             // 
@@ -312,7 +314,7 @@
             DOBTb.FillColor = System.Drawing.Color.White;
             DOBTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             DOBTb.ForeColor = System.Drawing.Color.Teal;
-            DOBTb.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            DOBTb.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             DOBTb.Location = new System.Drawing.Point(11, 636);
             DOBTb.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             DOBTb.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -322,25 +324,26 @@
             DOBTb.TabIndex = 27;
             DOBTb.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
             // 
-            // JDate
+            // JDateTb
             // 
-            JDate.Checked = true;
-            JDate.CustomizableEdges = customizableEdges3;
-            JDate.FillColor = System.Drawing.Color.White;
-            JDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            JDate.ForeColor = System.Drawing.Color.Teal;
-            JDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            JDate.Location = new System.Drawing.Point(12, 739);
-            JDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            JDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            JDate.Name = "JDate";
-            JDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            JDate.Size = new System.Drawing.Size(409, 49);
-            JDate.TabIndex = 28;
-            JDate.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
+            JDateTb.Checked = true;
+            JDateTb.CustomizableEdges = customizableEdges3;
+            JDateTb.FillColor = System.Drawing.Color.White;
+            JDateTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            JDateTb.ForeColor = System.Drawing.Color.Teal;
+            JDateTb.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            JDateTb.Location = new System.Drawing.Point(12, 739);
+            JDateTb.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            JDateTb.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            JDateTb.Name = "JDateTb";
+            JDateTb.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            JDateTb.Size = new System.Drawing.Size(409, 49);
+            JDateTb.TabIndex = 28;
+            JDateTb.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
             // 
             // label9
             // 
+            label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label9.ForeColor = System.Drawing.Color.Teal;
@@ -352,6 +355,7 @@
             // 
             // pictureBox5
             // 
+            pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             pictureBox5.Image = (System.Drawing.Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new System.Drawing.Point(990, 176);
             pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -363,6 +367,7 @@
             // 
             // label10
             // 
+            label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label10.ForeColor = System.Drawing.Color.Teal;
@@ -371,9 +376,11 @@
             label10.Size = new System.Drawing.Size(86, 29);
             label10.TabIndex = 60;
             label10.Text = "Salary";
+            label10.Click += label10_Click;
             // 
             // pictureBox4
             // 
+            pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             pictureBox4.Image = (System.Drawing.Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new System.Drawing.Point(817, 176);
             pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -385,6 +392,7 @@
             // 
             // label11
             // 
+            label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label11.ForeColor = System.Drawing.Color.Teal;
@@ -396,6 +404,7 @@
             // 
             // label12
             // 
+            label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label12.ForeColor = System.Drawing.Color.Teal;
@@ -407,6 +416,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             pictureBox3.Image = (System.Drawing.Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new System.Drawing.Point(591, 176);
             pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -418,6 +428,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new System.Drawing.Point(379, 176);
             pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -427,12 +438,28 @@
             pictureBox2.TabIndex = 55;
             pictureBox2.TabStop = false;
             // 
+            // Delete
+            // 
+            Delete.BackColor = System.Drawing.Color.Red;
+            Delete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            Delete.ForeColor = System.Drawing.Color.White;
+            Delete.Location = new System.Drawing.Point(798, 933);
+            Delete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Delete.Name = "Delete";
+            Delete.Size = new System.Drawing.Size(168, 61);
+            Delete.TabIndex = 63;
+            Delete.Text = "Delete";
+            Delete.UseVisualStyleBackColor = false;
+            Delete.Click += Delete_Click;
+            // 
             // Employees
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1325, 1055);
+            Controls.Add(Delete);
             Controls.Add(label9);
             Controls.Add(pictureBox5);
             Controls.Add(label10);
@@ -441,7 +468,7 @@
             Controls.Add(label12);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(JDate);
+            Controls.Add(JDateTb);
             Controls.Add(DOBTb);
             Controls.Add(EmployeeList);
             Controls.Add(UpdateBtn);
@@ -492,7 +519,7 @@
         private System.Windows.Forms.Button UpdateBtn;
         private Guna.UI2.WinForms.Guna2DataGridView EmployeeList;
         private Guna.UI2.WinForms.Guna2DateTimePicker DOBTb;
-        private Guna.UI2.WinForms.Guna2DateTimePicker JDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker JDateTb;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label10;
@@ -501,5 +528,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Delete;
     }
 }
