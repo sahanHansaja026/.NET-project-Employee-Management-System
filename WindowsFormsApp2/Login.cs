@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -29,7 +29,28 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (UNameTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Missing Data !!");
+            }
+            else if(UNameTb.Text == "Admin" && PasswordTb.Text == "123")
+            {
+                Employees Obj = new Employees();
+                Obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong userName or Password");
+                UNameTb.Text = "";
+                PasswordTb.Text = "";
+            }
+        }
 
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            UNameTb.Text = "";
+            PasswordTb.Text = "";
         }
     }
 }

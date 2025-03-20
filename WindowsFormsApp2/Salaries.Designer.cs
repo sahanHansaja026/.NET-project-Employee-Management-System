@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salaries));
-            SalaryTb = new Guna.UI2.WinForms.Guna2DateTimePicker();
             SalaryList = new Guna.UI2.WinForms.Guna2DataGridView();
             UpdateBtn = new System.Windows.Forms.Button();
             AddBtn = new System.Windows.Forms.Button();
@@ -59,6 +56,7 @@
             label12 = new System.Windows.Forms.Label();
             pictureBox3 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
+            AmountTb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)SalaryList).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -67,45 +65,28 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // SalaryTb
-            // 
-            SalaryTb.Checked = true;
-            SalaryTb.CustomizableEdges = customizableEdges5;
-            SalaryTb.FillColor = System.Drawing.Color.White;
-            SalaryTb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            SalaryTb.ForeColor = System.Drawing.Color.Teal;
-            SalaryTb.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            SalaryTb.Location = new System.Drawing.Point(12, 733);
-            SalaryTb.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            SalaryTb.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            SalaryTb.Name = "SalaryTb";
-            SalaryTb.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            SalaryTb.Size = new System.Drawing.Size(409, 49);
-            SalaryTb.TabIndex = 45;
-            SalaryTb.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
-            // 
             // SalaryList
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            SalaryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            SalaryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            SalaryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            SalaryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             SalaryList.ColumnHeadersHeight = 4;
             SalaryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            SalaryList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            SalaryList.DefaultCellStyle = dataGridViewCellStyle3;
             SalaryList.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             SalaryList.Location = new System.Drawing.Point(542, 349);
             SalaryList.Name = "SalaryList";
@@ -134,6 +115,7 @@
             SalaryList.ThemeStyle.RowsStyle.Height = 29;
             SalaryList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             SalaryList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            SalaryList.CellContentClick += SalaryList_CellContentClick;
             // 
             // UpdateBtn
             // 
@@ -162,6 +144,7 @@
             AddBtn.TabIndex = 42;
             AddBtn.Text = "Add";
             AddBtn.UseVisualStyleBackColor = false;
+            AddBtn.Click += AddBtn_Click;
             // 
             // label6
             // 
@@ -261,6 +244,7 @@
             EmpCb.Name = "EmpCb";
             EmpCb.Size = new System.Drawing.Size(410, 28);
             EmpCb.TabIndex = 47;
+            EmpCb.SelectedIndexChanged += EmpCb_SelectedIndexChanged;
             // 
             // DaysTb
             // 
@@ -275,7 +259,7 @@
             // PeriodTb
             // 
             PeriodTb.Checked = true;
-            PeriodTb.CustomizableEdges = customizableEdges7;
+            PeriodTb.CustomizableEdges = customizableEdges1;
             PeriodTb.FillColor = System.Drawing.Color.White;
             PeriodTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             PeriodTb.ForeColor = System.Drawing.Color.Teal;
@@ -284,7 +268,7 @@
             PeriodTb.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             PeriodTb.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             PeriodTb.Name = "PeriodTb";
-            PeriodTb.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            PeriodTb.ShadowDecoration.CustomizableEdges = customizableEdges2;
             PeriodTb.Size = new System.Drawing.Size(409, 49);
             PeriodTb.TabIndex = 49;
             PeriodTb.Value = new System.DateTime(2025, 3, 16, 10, 42, 48, 320);
@@ -299,6 +283,7 @@
             label9.Size = new System.Drawing.Size(105, 29);
             label9.TabIndex = 70;
             label9.Text = "Log Out";
+            label9.Click += label9_Click;
             // 
             // pictureBox5
             // 
@@ -377,12 +362,23 @@
             pictureBox2.TabIndex = 63;
             pictureBox2.TabStop = false;
             // 
+            // AmountTb
+            // 
+            AmountTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            AmountTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            AmountTb.Location = new System.Drawing.Point(13, 748);
+            AmountTb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            AmountTb.Name = "AmountTb";
+            AmountTb.Size = new System.Drawing.Size(409, 41);
+            AmountTb.TabIndex = 71;
+            // 
             // Salaries
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1325, 1055);
+            Controls.Add(AmountTb);
             Controls.Add(label9);
             Controls.Add(pictureBox5);
             Controls.Add(label10);
@@ -394,7 +390,6 @@
             Controls.Add(PeriodTb);
             Controls.Add(DaysTb);
             Controls.Add(EmpCb);
-            Controls.Add(SalaryTb);
             Controls.Add(SalaryList);
             Controls.Add(UpdateBtn);
             Controls.Add(AddBtn);
@@ -421,7 +416,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker SalaryTb;
         private Guna.UI2.WinForms.Guna2DataGridView SalaryList;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button AddBtn;
@@ -447,5 +441,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox AmountTb;
     }
 }
