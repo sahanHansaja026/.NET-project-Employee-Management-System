@@ -488,6 +488,7 @@
             Controls.Add(panel1);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Employees";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)EmployeeList).EndInit();
